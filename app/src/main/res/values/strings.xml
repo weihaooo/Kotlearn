@@ -1,0 +1,322 @@
+<!-- TODO: Remove or change this placeholder text -->
+<resources>
+    <string name="app_name">Kotlearn</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="register">Sign Up</string>
+
+
+    <string name="title_activity_bottom_nav1">BottomNav1</string>
+    <string name="title_chapters">Chapters</string>
+    <string name="title_quiz">Quiz</string>
+    <string name="title_profile">Profile</string>
+
+
+    <string name="variables_content">
+        <big><b>Variables</b></big>\n\n
+        A variable refers to a memory location that stores some data. It has a name and an associated type. The type of a variable defines the range of values that the variable can hold, and the operations that can be done on those values. You can declare a variable in Kotlin using var and val keywords. A variable declared using val keyword is immutable (read-only). It cannot be reassigned after it is initialized - \n\n
+        val name = \"Bill Gates\" \n name = \"Satoshi Nakamoto\"	<font color="#008000">// Error: Val cannot be reassigned</font> \n\n
+
+        For defining a mutable variable, i.e. a variable whose value can be changed, use the var keyword - \n\n
+
+        var country = \"USA\" \n country = \"India\"    <font color="#008000">// Works </font>\n\n
+
+        <big><b>Type Reference</b></big>\n\n
+
+        Did you notice one thing about the variable declarations in the previous section? We didn’t specify the type of variables. Although Kotlin is a statically typed language, It doesn’t require you to explicitly specify the type of every variable you declare. It can infer the type of a variable from the initializer expression - \n\n
+
+        val greeting = \"Hello, World\"  <font color="#008000">// type inferred as `String`</font> \n
+        val year = 2018 <font color="#008000">// type inferred as `Int` </font>\n\n
+
+        If you want to explicitly specify the type of a variable, you can do that like this -  \n\n
+
+        <font color="#008000">// Explicitly defining the type of variables</font> \n
+        val greeting: String = \"Hello, World\" \n
+        val year: Int = 2018 \n\n
+
+        Note that the type declaration becomes mandatory if you’re not initializing the variable at the time of declaration - \n\n
+
+        var language   <font color="#008000">// Error: The variable must either have a Type annotation or be initialized</font> \n
+        language =  \"French\"\n\n
+
+        The above variable declaration fails because Kotlin has no way to infer the type of the variable without an initializer expression. In this case, you must explicitly specify the type of the variable - \n\n
+
+        var language: String   <font color="#008000">// Works </font>\n
+        language = \"French\"\n\n
+    </string>
+    <string name="datatypes_content">
+        <big><b>Data Types</b></big>\n\n
+
+        Data Types are used to categorize a set of related values and define the operations that can be done on them. Just like other languages, Kotlin has predefined types like Int, Double Boolean, Char etc. In Kotlin, everything (even the basic types like Int and Boolean) is an object. More specifically, everything behaves like an Object. Kotlin may represent some of the basic types like numbers, characters and booleans as primitive values at runtime to improve performance, but for the end users, all of them are objects. This is contrary to languages like Java that has separate primitive types like int, double etc, and their corresponding wrapper types like Integer, Double etc. Let’s now look at all the basic data types used in Kotlin one by one - \n\n
+
+        <b>Numbers</b>\n
+        Numeric types in Kotlin are similar to Java. They can be categorized into integer and floating point types.\n\n
+
+        <b>Integers</b>\n
+        Byte - 8 bit \nShort - 16 bit \nInt - 32 bit \nLong - 64 bit\n\n
+
+        <b>Floating Point Numbers</b>\n
+        Float - 32 bit single-precision floating point value.   \n
+        Double - 64 bit double-precision floating point value.\n\n
+
+        <b>Booleans</b>\n
+        The type Boolean is used to represent logical values. It can have two possible values true and false.\n
+        val myBoolean = true \n
+        val anotherBoolean = false\n\n
+
+        <b>Characters</b>\n
+        Characters are represented using the type Char. Unlike Java, Char types cannot be treated as numbers. They are declared using single quotes like this -\n
+        val letterChar = \'A\' \n
+        val digitChar = \'9' \n\n
+        Just like other languages, special characters in Kotlin are escaped using a backslash. Some examples of escaped characters are - \\n (newline), \\t (tab), \\r (carriage return), \\b (backspace) etc.\n\n
+
+        <b>Strings</b>\n
+        Strings are represented using the String class. They are immutable, that means you cannot modify a String by changing some of its elements. \n\nYou can declare a String like this -\n
+        var myStr = \"Hello, Kotlin\"\n\n
+
+        You can access the character at a particular index in a String using str[index]. The index starts from zero -\n
+        var name = "John" \n
+        var firstCharInName = name[0]  // \'J\' \n
+        var lastCharInName = name[name.length - 1]  // \'n\' \n\n
+
+        <big><b>Conclusion</b></big>\n
+        That’s all folks! In this article, You learned how to declare mutable and immutable variables. How type inference works in Kotlin. What are the basic data types supported in Kotlin. How to work with data types like Int, Long Double, Char, Boolean, String and Array, and how to convert one type to another.
+    </string>
+
+    <!--1.3.5 : ESCAPED STRING AND RAW STRING-->
+    <string name="escape_raw_string_header">Escaped String and Raw String</string>
+    <string name="escape_raw_string_para1">Strings declared in double quotes can have escaped characters like ‘\\n’ (new line), ‘\\t’ (tab) etc -</string>
+    <string name="escape_raw_string_example1">var myEscapedString = "Hello Reader,\nWelcome to my Blog"</string>
+    <string name="escape_raw_string_para2">In Kotlin, you also have an option to declare raw strings. These Strings have no escaping and can span multiple lines -</string>
+    <string name="escape_raw_string_example2">var myMultilineRawString = """ \nThe Quick Brown Fox \nJumped Over a Lazy Dog. \n"""</string>
+    <!--1.3.6 : ARRAYS-->
+    <string name="arrays_header">Arrays</string>
+    <string name="arrays_para1">Arrays in Kotlin are represented using the Array class. You can create an array in Kotlin either using the library function arrayOf() or using the Array() constructor.</string>
+    <string name="arrays_subheader1">Creating Arrays using the arrayOf library function</string>
+    <string name="arrays_subheader1_para1">You can pass a bunch of values to the arrayOf function to create an array like this -</string>
+    <string name="arrays_subheader1_example1">var numbers = arrayOf(1, 2, 3, 4, 5) \nvar animals = arrayOf("Cat", "Dog", "Lion", "Tiger")</string>
+    <string name="arrays_subheader1_para2">Note that you can also pass values of mixed types to the arrayOf() function, and it will still work (but don’t do that) -</string>
+    <string name="arrays_subheader1_example2">var mixedArray = arrayOf(1, true, 3, "Hello", \'A\')	// Works and creates an array of Objects</string>
+    <string name="arrays_subheader1_para3">You can also enforce a particular type while creating the array like this -</string>
+    <string name="arrays_subheader1_example3">var numArray = arrayOf<Int>(1, 2, 3, 4, "Hello")  // Compiler Error </Int>//delete this</string>
+    <string name="arrays_subheader2">Accessing the elements of an array by their index</string>
+    <string name="arrays_subheader2_para1">You can access the element at a particular index in an array using array[index]. The index starts from zero -</string>
+    <string name="arrays_subheader2_example1">val myDoubleArray = arrayOf(4.0, 6.9, 1.7, 12.3, 5.4) \nval firstElement = myDoubleArray[0] \nval lastElement = myDoubleArray[myDoubleArray.size - 1]</string>
+    <string name="arrays_subheader2_para2">Every array has a size property that you can use to get the size of the array. \n\nYou can also modify the array element at an index like this -</string>
+    <string name="arrays_subheader2_example2">val a = arrayOf(4, 5, 7)  // [4, 5, 7] \na[1] = 10		          // [4, 10, 7]	</string>
+    <string name="arrays_subheader3">Primitive Arrays</string>
+    <string name="arrays_subheader3_para1">As we learned earlier, everything in Kotlin is an object. But to improve performance it represents some of the basic types like numbers, characters and booleans as primitive types at runtime. \n\n The arrayOf() function creates arrays of boxed/wrapper types. That is, arrayOf(1, 2, 3) corresponds to Java’s Integer[] array. \n\n But, Kotlin provides a way to create arrays of primitive types as well. It contains specialized classes for representing array of primitive types. Those classes are - IntArray, DoubleArray, CharArray etc. You can create an array of primitive types using the corresponding library functions - intArrayOf(), doubleArrayOf(), charArrayOf() etc. -</string>
+    <string name="arrays_subheader3_example1">val myCharArray = charArrayOf(\'K\', \'O\', \'T\')  // CharArray (corresponds to Java \'char[]\') \nval myIntArray = intArrayOf(1, 3, 5, 7)		// IntArray (corresponds to Java 'int[]')</string>
+    <string name="arrays_subheader4">Creating Arrays using the Array() constructor</string>
+    <string name="arrays_subheader4_para1">The Array() constructor takes two arguments - \n\n1. the size of the array, and \n2. a function that takes the array index as an argument and returns the element to be inserted at that index.</string>
+    <string name="arrays_subheader4_example1">var mySquareArray = Array(5, {i -> i * i})	// [0, 1, 4, 9, 16]</string>
+    <string name="arrays_subheader4_para2">The second argument to the Array() constructor is a lambda expression. Lambda expressions are anonymous functions that are declared and passed around as expressions. We’ll learn more about lambda expressions in a future tutorial. \n \nThe above lambda expression takes the index of an array element and returns the value that should be inserted at that index, which is the square of the index in this case.</string>
+    <!--1.3.7 : TYPE CONVERSIONS-->
+    <string name="type_conversion_header">Type Conversions</string>
+    <string name="type_conversion_para1">Unlike Java, Kotlin doesn’t support implicit conversion from smaller types to larger types. For example, Int cannot be assigned to Long or Double.</string>
+    <string name="type_conversion_example1">var myInt = 100 \nvar myLong: Long = myInt // Compiler Error</string>
+    <string name="type_conversion_para2">However, Every number type contains helper functions that can be used to explicitly convert one type to another. \n\nFollowing helper functions are supported for type conversion between numeric types - \n• toByte() \n• toShort() \n• toInt() \n• toLong() \n• toFloat() \n• toDouble() \n• toChar()</string>
+    <string name="type_conversion_subheader1">Examples of explicit type conversions</string>
+    <string name="type_conversion_subheader1_para1">Here is how you can convert an Int to Long -</string>
+    <string name="type_conversion_subheader1_example1">val myInt = 100 \nval myLong = myInt.toLong()   // Explicitly converting 'Int' to 'Long'</string>
+    <string name="type_conversion_subheader1_para2">You can also convert larger types to smaller types -</string>
+    <string name="type_conversion_subheader1_example2">val doubleValue = 176.80 \nval intValue = doubleValue.toInt()  // 176</string>
+    <string name="type_conversion_subheader1_para3">Every type in Kotlin, not just numeric type, supports a helper function called toString() to convert it to String.</string>
+    <string name="type_conversion_subheader1_example3">val myInt = 1000 \nmyInt.toString()  // "1000"</string>
+    <string name="type_conversion_header_para4">You can also convert a String to a numeric type like so -</string>
+    <string name="type_conversion_header_example4">val str = "1000" \nval intValue = str.toInt()</string>
+    <string name="type_conversion_header_para5">If the String-to-Number conversion is not possible then a NumberFormatException is thrown -</string>
+    <string name="type_conversion_header_example5">val str = "1000ABC" \nstr.toInt()   // Throws java.lang.NumberFormatException</string>
+
+    <string name="variables_and_datatypes_conclusion">Conclusion</string>
+    <string name="variables_and_datatypes_conclusion_para1"></string>
+
+    <string name="operations_content">
+<p>In the previous article, you learned how to create variables and what are various basic data types available in Kotlin for creating variables.</p>
+<p>In this article, "you'll" learn what are various operators provided by kotlin to perform operations on basic data types.</p>\n\n
+        <big><b>Operations on Numeric Types</b></big>\n\n
+<p>Just like other languages, Kotlin provides various operators to perform computations on numbers -</p>\n\n
+
+        <blockquote>
+        <ul>
+            <li>Arithmetic operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>)</li>\n
+            <li>Comparison operators (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>)</li>\n
+            <li>Assignment operators (<code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>)</li>\n
+            <li>Increment &amp; Decrement operators (<code>++</code>, <code>--</code>)</li>\n\n
+        </ul>
+        </blockquote>
+<p>Following are few examples that demonstrate the usage of above operators -</p>\n\n
+        <blockquote>
+            <pre><code class="language-kotlin"><font color="blue">var</font> a = 10\n
+            <font color="blue">var</font> b = 20\n
+                <font color="blue">var</font> c = ((a + b) * ( a + b))/2   <font color="#008000">// 450</font>\n
+
+                <font color="blue">var</font> isALessThanB = a &lt; b   <font color="#008000">// true</font>\n\n
+
+                a++     <font color="#008000">// a now becomes 11</font>\n
+                b += 5  <font color="#008000">// b equals to 25 now</font>\n
+
+            </code></pre>
+        </blockquote>\n\n
+
+        <big><b>Understanding Kotlin operators</b></big>\n\n
+Everything in Kotlin is an object, even the basic data types like <code>Int</code>, <code>Char</code>, <code>Double</code>, <code>Boolean</code> etc. Kotlin "doesn't" have separate primitive types and their corresponding boxed types like Java.
+Note that Kotlin may represent basic types like <code>Int</code>, <code>Char</code>, <code>Boolean</code> etc. as primitive values at runtime to improve performance, but for the end users, all of them are objects.
+Since all the data types are objects, the operations on these types are internally represented as function calls. For example, the addition operation <code>a + b</code> between two numbers <code>a</code> and <code>b</code> is represented as a function call <code>a.plus(b)</code> -\n\n
+        <blockquote>
+            <pre><code class="language-kotlin">
+                <font color="blue">var</font> a = 4\n
+                <font color="blue">var</font> b = 5\n\n
+                println(a + b) <font color="#008000">// equivalent to</font>\n
+                println(a.plus(b))\n
+            </code></pre>
+        </blockquote>\n\n
+All the operators that we looked at in the previous section have a symbolic name which is used to translate any expression containing those operators into the corresponding function calls -\n
+You can check out other expressions and their corresponding function calls on "Kotlin's" reference page.\n\n
+
+</string>
+
+    <string name="intro_content">
+        <p>The first program that we typically write in any programming language is the \"Hello, World\" program. Let\'s write the \"Hello, World\" program in Kotlin and understand its internals.</p>\n\n
+        <big><b>The \"Hello, World!\" program in Kotlin</b></big>\n\n
+        Open your favorite editor or an IDE and create a file named <code>hello.kt</code> with the following code - \n\n
+        <pre><code class="language-kotlin"><font color="#008000">// Kotlin Hello World Program</font>\n
+            fun main(args: Array&lt;String&gt;) {\n
+                println(\"Hello, World!\")\n
+            }
+        </code></pre>\n\n
+        You can compile and run the program using "Kotlin's" compiler like so -\n\n
+        <pre><code class="language-kotlin">$ kotlinc hello.kt\n
+            $ kotlin HelloKt\n
+            Hello, World!\n
+        </code></pre>\n\n
+You can also run the program in an IDE like Eclipse or IntelliJ. Learn how to setup and run Kotlin programs in your system.\n\n
+
+<big><b>Internals of the \"Hello, World!\" program</b></big>\n\n
+
+        <ul>
+            <li><strong>Line 1.</strong> The first line is a comment. Comments are ignored by the compiler. They are used for your own sake (and for others who read your code).\n
+                Kotlin supports two different styles of comments similar to other languages like C, C++, and Java -\n\n
+                <ol>
+                    <li>Single Line Comment:\n
+                        <pre><code class="language-kotlin"><font color="#008000">// This is a Single line comment</font></code></pre></li>\n\n
+                    <li>Multi-line Comment:\n
+                        <pre><code class="language-kotlin">
+                            /*\n
+                            This is an example of a multi-line comment.\n
+                            It can span over multiple lines.\n
+                            */
+                        </code></pre></li>
+                </ol></li>\n\n
+            <li><strong>Line 2.</strong> The second line defines a function called <code>main</code>.\n\n
+                <pre><code class="language-kotlin">fun main(args: Array&lt;String&gt;) {\n
+                    <font color="#008000">  // ...</font>\n
+                    }
+                </code></pre>\n\n
+                Functions are the building blocks of a Kotlin program. All functions in Kotlin start with the keyword <code>fun</code> followed by a name of the function (<code>main</code> in this case), a list of zero or more comma-separated parameters, an optional return type, and a body. The <code>main()</code> function takes one argument - an <code>Array</code> of strings, and returns <code>Unit</code>. The <code>Unit</code> type corresponds to <code>void</code> in Java. It is used to indicate that the function (doesn't) return any meaningful value. The <code>Unit</code> type is optional. i.e. you (don't) need to declare it explicitly in the function declaration -\n\n
+                <pre><code class="language-kotlin">fun main(args: Array&lt;String&gt;): Unit {   <font color="#008000">// `Unit` is optional</font>\n\n
+
+                    }
+                </code></pre>\n\n
+                If you "don't" specify a return type, <code>Unit</code> is assumed. <em>The <code>main()</code> function is not just any ordinary function. It is the entry point of your program. It is the first thing that gets called when you run a Kotlin program.</em></li>\n\n
+            <li><strong>Line 3.</strong> The third line is a statement. It prints a String \"Hello, World!\" to standard output. \n\n
+                <pre><code class="language-kotlin">println(\"Hello, World!\")    <font color="#008000">// No Semicolons needed :)</font>\n\n
+                </code></pre>
+                Note that we can directly use <code>println()</code> to print to standard output, unlike Java where we need to use <code>System.out.println()</code>. Kotlin provides several wrappers over standard Java library functions, <code>println</code> is one of them. Also, Semicolons are optional in Kotlin, just like many other modern languages.</li>
+        </ul>\n\n
+        <big><b>Conclusion</b></big>\n\n
+        Congratulations! You just wrote your first program in Kotlin. You learned about the main method, single-line and multi-line comments, and the <code>println</code> library function. In the next article, (you'll) learn how to create variables in Kotlin and also look at various data types that are supported for creating variables.
+    </string>
+
+    <string name="controlflow_content">
+        In this article, You’ll learn how to use Kotlin’s control flow expressions and statements which includes conditional expressions like if, if-else, when and looping statements like for, while, and do-while.\n\n
+
+        <big><b>If Statement</b></big>\n\n
+
+        The If statement allows you to specify a section of code that is executed only if a given condition is true-\n\n
+        var n = 34\n
+        if(n % 2 == 0) {\n
+            println("$n is even")\n
+        }\n
+        <font color="#008000">// Displays - "34 is even"</font>\n\n
+
+        <big><b>If-Else Statement</b></big>\n\n
+
+        The if-else statement executes one section of code if the condition is true and the other if the condition is false -\n\n
+
+        var a = 32\n
+        var b = 55\n\n
+
+        if(a > b) {\n
+            println("max($a, $b) = $a")\n
+        } else {\n
+            println("max($a, $b) = $b")\n
+        }\n\n
+
+        <font color="#008000">// Displays - "max(32, 55) = 55"</font>\n\n
+
+        <big><b>When Expression</b></big>\n\n
+
+        Kotlin’s when expression is the replacement of switch statement from other languages like C, C++, and Java. It is concise and more powerful than switch statements.\n\n
+
+        Here is how a when expression looks like -\n\n
+        var dayOfWeek = 4\n
+        when(dayOfWeek) {\n
+            1 -> println("Monday")\n
+            2 -> println("Tuesday")\n
+            3 -> println("Wednesday")\n
+            4 -> println("Thursday")\n
+            5 -> println("Friday")\n
+            6 -> println("Saturday")\n
+            7 -> println("Sunday")\n
+            else -> println("Invalid Day")\n
+        }\n
+        <font color="#008000">// Displays - "Thursday"</font>\n\n
+        when expression matches the supplied argument with all the branches one by one until a match is found. Once a match is found, it executes the matched branch. If none of the branches match, the else branch is executed.\n\n
+
+        <big><b>Conclusion</b></big>\n\n
+        That’s all folks! In this article, you learned how to use Kotlin’s conditional expressions like if, if-else, when, and looping statements like for, while and do-while. You can find more articles from the sidebar menu.
+    </string>
+
+    <string name="null_content">
+        Kotlin supports nullability as part of its type System. That means You have the ability to declare whether a variable can hold a null value or not.\n\n
+
+        By supporting nullability in the type system, the compiler can detect possible NullPointerException errors at compile time and reduce the possibility of having them thrown at runtime.\n\n
+
+        <big><b>Let’s understand how it works!</b></big>\n\n
+
+        All variables in Kotlin are non-nullable by default. So If you try to assign a null value to a regular variable, the compiler will throw an error. To allow null values, you have to declare a variable as nullable by appending a question mark in its type declaration.\n\n
+
+        var nullableGreeting: String? = \"Hello, World\"\n\n
+        nullableGreeting = null\n\n
+
+        We know that NullPointerException occurs when we try to call a method or access a property on a variable which is null. Kotlin disallows method calls and property access on nullable variables and thereby prevents many possible NullPointerExceptions.\n\n
+
+        For example, The following method access does not work because Kotlin knows that the variable nullableGreeting can be null -\n\n
+
+        val len = nullableGreeting.length <font color="#008000">// Compilation Error</font>\n
+        val upper = nullableGreeting.toUpperCase()  <font color="#008000">// Compilation Error</font>\n\n
+
+        Since Kotlin knows beforehand which variable can be null and which cannot, It can detect and disallow calls which could result in NullPointerException at compile-time itself.\n\n
+
+        <big><b>Conclusion</b></big>\n\n
+        That’s all in this article folks. I hope you understood how kotlin helps you avoid NullPointerException errors with its nullable type concept.
+    </string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="leaderboard">Leaderboard</string>
+
+</resources>

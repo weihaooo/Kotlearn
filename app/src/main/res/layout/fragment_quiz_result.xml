@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.QuizResult">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:text="@string/hello_blank_fragment" />
+
+        <ImageView
+            android:id="@+id/ivResultIcon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="9"
+            android:src="@drawable/happy" />
+
+        <TextView
+            android:id="@+id/tvResult2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:textSize="18dp"
+            android:text="@string/hello_blank_fragment" />
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="match_parent"
+            android:background="@drawable/curved_button_primary_effect"
+            android:layout_margin="40dp"
+            android:layout_height="wrap_content"
+            android:text="Finish" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

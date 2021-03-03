@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llQuestionDisplay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".ui.QuestionDisplay">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/curve_bg">
+
+        <TextView
+            android:id="@+id/currentChapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Chapter 1-"
+            android:textSize="15dp"
+            android:textColor="@color/textWhite"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentChapter"
+            android:max="10"
+            android:progress="3" />
+        <TextView
+            android:id="@+id/tvDisplayCurrentQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/progressBar"
+            android:textSize="12dp"
+            android:text="Question 1/10"
+            android:textColor="@color/textWhite"
+            />
+
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/tvDisplayCurrentQ"
+            android:textSize="15dp"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/textWhite" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAnswer1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/curved_button_white_effect"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btnAnswer2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/curved_button_white_effect"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btnAnswer3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/curved_button_white_effect"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btnAnswer4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/curved_button_white_effect"
+        android:text="Button" />
+
+
+</LinearLayout>
